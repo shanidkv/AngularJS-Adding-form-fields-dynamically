@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html ng-app="shanidkvApp">
+	<head>
+		<!--[if IE]>
+	      	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	      <![endif]-->
+	    <title>Shanid KV | AngularJS Dynamic Form Fields</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	
+	<body>
+
+		<div class="container">
+
+			<div class="row">
+
+				<h3>AngularJS Dynamic Form Fields</h3>
+
+				<hr/>
+
+				<div ng-app="angularjs-starter" ng-controller="MainCtrl">
+				   <fieldset  data-ng-repeat="choice in choices">
+				      <select>
+				         <option>Mobile</option>
+				         <option>Office</option>
+				         <option>Home</option>
+				      </select>
+				      <input type="text" ng-model="choice.name" name="" placeholder="Enter mobile number">
+				      <button class="remove" ng-show="$last" ng-click="removeChoice()">-</button>
+				   </fieldset>
+				   <button class="addfields" ng-click="addNewChoice()">Add fields</button>
+				       
+				   <div id="choicesDisplay">
+				      {{ choices }}
+				   </div>
+				</div>
+				
+			</div>
+
+		</div>
+		
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+
+		<div class="footer">
+	    	<div class="container">
+	        	<p class="row text-muted">Copyright &copy; <script>document.write(new Date().getFullYear())</script>, <a href="http://www.shanidkv.com/">shanidkv.com</a></p>
+	    	</div>
+	    </div>
+
+	</body>
+</html>
